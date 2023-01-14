@@ -1,25 +1,52 @@
 import React from 'react';
+import Navigation from './components/Navigation';
 import logo from './logo.svg';
-import './App.css';
 
+import 'bootstrap/dist/css/bootstrap.min.css';
+import './styles/ArgonDesignSystemReact.css';
+import './styles/styles.css';
+import "./styles/vendor/font-awesome/css/font-awesome.min.css";
+import "./styles/vendor/nucleo/css/nucleo.css";
+import Greetings from './components/Greetings';
+import Skills from './containers/Skills';
+import Proficiency from './containers/Proficiency';
+import Education from './containers/Education';
+import Experience from './containers/Experience';
+import Feedbacks from './containers/Feedbacks';
+import Projects from './containers/Projects';
+import GithubProfileCard from './components/GithubProfileCard';
+import { openSource } from './constants/portfolio';
+
+const githubProfileData = async (githubUserName: string): Promise<any> => {
+  const githubProfileData = await fetch(
+    `https://api.github.com/users/${githubUserName}`
+  ).then((res) => res.json());
+  return githubProfileData
+}
 function App() {
+  const [profileData, setProfileData] = React.useState({
+    avatar_url: "",
+    bio: "",
+    location: "",
+  });
+  React.useEffect(() => {
+    githubProfileData(openSource.githubUserName).then((res) => {
+      setProfileData(res)
+    })
+  }, []);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <Navigation />
+      <Greetings />
+      <Skills />
+      <Proficiency />
+      <Education />
+      <Experience />
+      <Feedbacks />
+      <Projects />
+      <GithubProfileCard prof={profileData} />
+    </>
   );
 }
 
