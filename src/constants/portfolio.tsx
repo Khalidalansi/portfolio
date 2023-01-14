@@ -4,7 +4,7 @@ export const greetings = {
     name: "Khalid Alansi",
     title: "Hi all, I'm Khalid Alansi",
     description:
-        "I'm passionate Full Stack web developer and Mobile Developer having an experience of web applications with PHP, Laravel, Wordpress, React.js, React-Native",
+        "I'm passionate Full Stack web developer and Mobile Developer having an experience of web applications with PHP, Laravel, Wordpress, React.js, and Mobile applications with React-Native",
     resumeLink:
         "https://drive.google.com/file/d/1zzbZiKRIUW9qUTQKhbV41dbQbuB0TIOw/view?usp=sharing",
 };
@@ -182,7 +182,9 @@ export const experience = [
     {
         role: "Full-Stack Developer",
         company: "Gray Alien Ventures",
-        companylogo: "/img/icons/common/dusecaSoftware.jpg",
+        // companylogo: require("../assets/images/grayalienventures.png"),
+        companylogo: "https://avatars.githubusercontent.com/u/81111279?v=4",
+
         date: "2018 – 2023",
         desc: "It's a startup in USA in Denver developing websites and mobile apps.",
     },
@@ -199,25 +201,45 @@ export const experience = [
 
 export const projects = [
     {
-        name: "developer-portfolio",
-        desc: "Software Developer Portfolio Template built with react.js and next.js bootstrap that helps you showcase your work and skills as a software developer.",
-        github: "https://github.com/1hanzla100/developer-portfolio",
-        link: "https://developer-portfolio-1hanzla100.vercel.app/",
+        name: "Portfolio",
+        desc: "Software Developer Portfolio Template built with react.js and typescript bootstrap that helps you showcase your work and skills as a software developer.",
+        github: "https://github.com/Khalidalansi/portfolio",
+        link: "https://khalidalansi.github.io",
+    },
+    // {
+    //     name: "Deirezzor24",
+    //     desc: "I created an application for a remote client to view the news and connect it with a WordPress blog. ( React-Native )",
+    //     link: "https://play.google.com/store/apps/details?id=com.deirezzor24",
+    // },
+    // {
+    //     name: "Binabbas",
+    //     desc: "I created a website for a local client with wordpress",
+    //     link: "https://www.binabbas.info/",
+    // },
+    {
+        name: "WP Core Plugin Setup",
+        desc: "emplate WordPress directory that exposes REST endpoints. Also used by script in `server-setup` repo. ( Wordpress - Rest Api ).",
+        github: "https://github.com/grayalienventures/wp-core-plugin-setup",
     },
     {
-        name: "Deirezzor24",
-        desc: "I created an application for a remote client to view the news and connect it with a WordPress blog. ( React-Native )",
-        link: "https://play.google.com/store/apps/details?id=com.deirezzor24",
+        name: "Rapid React App and Server Setup",
+        desc: "Sets up web server with React frontend, WordPress backend, nginx conf file, and SSL certificate. ( Ubuntu - Nginx - CertBot ).",
+        github: "https://github.com/grayalienventures/server-setup",
     },
     {
-        name: "Technota (Forum)",
-        desc: "Get hands-on experience in technical skills with Technota",
-        github: "https://github.com/1hanzla100/django-react-forum",
+        name: "Prototype Node",
+        desc: "Template React directory. Also used by script in `server-setup` repo. ( Node js - React js - Webpack ).",
+        github: "https://github.com/grayalienventures/prototype-node",
     },
     {
-        name: "Shopaza (Ecommerce)",
-        desc: "Now your reach to all your favorite entertainment and luxury items is just one touch apart",
-        github: "https://github.com/1hanzla100/Django-ecommerce",
+        name: "EasyEatery",
+        desc: "built this project for a client of ( Gray Alien Ventures ). ( React js - Node js - Wordpress - Webppack ).",
+        link: "https://www.easyeatery.net",
+    },
+    {
+        name: "Movesheet",
+        desc: "This is a project for the company and it is a web application and a mobile application ( React js - Node js - Wordpress - Webppack - React-Native ).",
+        link: "https://movesheet.com",
     },
 ];
 

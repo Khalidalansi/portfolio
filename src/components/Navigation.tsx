@@ -11,7 +11,7 @@ import {
     Col,
 } from "reactstrap";
 import { greetings, socialLinks } from '../constants/portfolio';
-
+import Headroom from "headroom.js";
 export type INavigationProps = {
 
 }
@@ -21,7 +21,11 @@ const Navigation: React.FC<INavigationProps> = (props) => {
     const onExiting = () => setCollapseClasses("collapsing-out");
 
     const onExited = () => setCollapseClasses("");
-
+    React.useEffect(() => {
+		let headroom = new Headroom(document.getElementById("navbar-main"));
+		// initialise
+		headroom.init();
+	});
 
     return (
         <>
@@ -29,9 +33,9 @@ const Navigation: React.FC<INavigationProps> = (props) => {
                 <Navbar
                     className="navbar-main navbar-transparent navbar-light headroom"
                     expand="lg"
-                    id="navbar-main"
-                >
-                    <Container>
+                    container="lg"
+                    id="navbar-main" >
+                  
                         <NavbarBrand href="/" className="mr-lg-5">
                             <h2 className="text-white" id="nav-title">
                                 {greetings.name}
@@ -158,7 +162,7 @@ const Navigation: React.FC<INavigationProps> = (props) => {
                                 )}
                             </Nav>
                         </UncontrolledCollapse>
-                    </Container>
+                    
                 </Navbar>
             </header>
         </>

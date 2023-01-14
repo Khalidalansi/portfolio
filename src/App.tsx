@@ -7,6 +7,7 @@ import './styles/ArgonDesignSystemReact.css';
 import './styles/styles.css';
 import "./styles/vendor/font-awesome/css/font-awesome.min.css";
 import "./styles/vendor/nucleo/css/nucleo.css";
+import './assets/fonts/Agustina.otf';
 import Greetings from './components/Greetings';
 import Skills from './containers/Skills';
 import Proficiency from './containers/Proficiency';
@@ -43,7 +44,7 @@ function App() {
       <Proficiency />
       <Education />
       <Experience />
-      <Feedbacks />
+      {/* <Feedbacks /> */}
       <Projects />
       <GithubProfileCard prof={profileData} />
     </>
