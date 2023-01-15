@@ -52,9 +52,14 @@ export const skillsSection = {
                     skillName: "HTML-5",
                     fontAwesomeClassname: "vscode-icons:file-type-html",
                 },
+               
                 {
                     skillName: "CSS-3",
                     fontAwesomeClassname: "vscode-icons:file-type-css",
+                },
+                {
+                    skillName: "Material UI",
+                    fontAwesomeClassname: "logos:material-ui",
                 },
                 {
                     skillName: "JavaScript",
