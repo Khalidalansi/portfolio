@@ -8,18 +8,23 @@ import {
     Col,
 } from "reactstrap";
 import Reveal from "react-awesome-reveal";
+import { useTheme } from 'styled-components';
 export type IExperienceCardProps = {
     data: any
 }
 
 const ExperienceCard: React.FC<IExperienceCardProps> = ({ data }) => {
+    const theme = useTheme()
     return (
         <Col lg="6">
             <Reveal triggerOnce duration={2000}>
                 <Card
-                    style={{ flex: 1 }}
                     className="shadow-lg--hover mb-3 shadow border-0 text-center rounded"
-                >
+                    style={{
+                        flex: 1,
+                        backgroundColor: theme?.cardBackground,
+                        borderColor: theme?.cardBorderColor,
+                    }}>
                     <CardBody className="">
                         <img
                             src={data.companylogo}

@@ -82,6 +82,10 @@ export const skillsSection = {
                     fontAwesomeClassname: "logos:php",
                 },
                 {
+                    skillName: "Laravel",
+                    fontAwesomeClassname: "logos:laravel",
+                },
+                {
                     skillName: "Redux",
                     fontAwesomeClassname: "logos:redux",
                 },
@@ -186,8 +190,8 @@ export const educationInfo = [
 export const experience = [
     {
         role: "Full-Stack Developer",
-        company: "Gray Alien Ventures",
-        // companylogo: require("../assets/images/grayalienventures.png"),
+        company: "INTP LLC",
+        // companylogo: require("../assets/images/INTP LLCalienventures.png"),
         companylogo: "https://avatars.githubusercontent.com/u/81111279?v=4",
 
         date: "2018 – 2023",
@@ -223,22 +227,22 @@ export const projects = [
     // },
     {
         name: "WP Core Plugin Setup",
-        desc: "emplate WordPress directory that exposes REST endpoints. Also used by script in `server-setup` repo. ( Wordpress - Rest Api ).",
-        github: "https://github.com/grayalienventures/wp-core-plugin-setup",
+        desc: "Template WordPress directory that exposes REST endpoints. Also used by script in `server-setup` repo. ( Wordpress - Rest Api ).",
+        github: "https://github.com/INTP LLCalienventures/wp-core-plugin-setup",
     },
     {
         name: "Rapid React App and Server Setup",
         desc: "Sets up web server with React frontend, WordPress backend, nginx conf file, and SSL certificate. ( Ubuntu - Nginx - CertBot ).",
-        github: "https://github.com/grayalienventures/server-setup",
+        github: "https://github.com/INTP LLCalienventures/server-setup",
     },
     {
         name: "Prototype Node",
-        desc: "Template React directory. Also used by script in `server-setup` repo. ( Node js - React js - Webpack ).",
-        github: "https://github.com/grayalienventures/prototype-node",
+        desc: "Template React directory. Also used by script in ( server-setup ) repo. ( Node js - React js - Webpack ).",
+        github: "https://github.com/INTP LLCalienventures/prototype-node",
     },
     {
         name: "EasyEatery",
-        desc: "built this project for a client of ( Gray Alien Ventures ). ( React js - Node js - Wordpress - Webppack ).",
+        desc: "built this project for a client of ( INTP LLC ). ( React js - Node js - Wordpress - Webppack ).",
         link: "https://www.easyeatery.net",
     },
     {

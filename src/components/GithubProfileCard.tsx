@@ -1,5 +1,6 @@
 import React from 'react';
 import { Card, Col, Row, Container } from "reactstrap";
+import { useDarkMode } from '../constants/Theme/useDarkMode';
 import SocialLinks from './SocialLinks';
 export type IGithubProfileCardProps = {
     prof: {
@@ -10,8 +11,9 @@ export type IGithubProfileCardProps = {
 }
 
 const GithubProfileCard: React.FC<IGithubProfileCardProps> = ({ prof }) => {
+    const [isDarkMode] = useDarkMode()
     return (
-        <Card className="section-lg bg-gradient-info shadow-lg border-0">
+        <Card className={`section-lg ${isDarkMode ? "bg-gradient-dark" : "bg-gradient-info"} shadow-lg border-0`}>
             <Container className="">
                 <div className="p-2">
                     <Row className="">

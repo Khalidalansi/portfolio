@@ -2,14 +2,16 @@ import React from 'react';
 import { educationInfo } from '../constants/portfolio';
 import { Container, Row, Col } from "reactstrap";
 import EducationCard from '../components/EducationCard';
+import { useDarkMode } from '../constants/Theme/useDarkMode';
 
 export type IEducationProps = {
-    
+
 }
 
 const Education: React.FC<IEducationProps> = ({ }) => {
-    return educationInfo && (
-		<section className="section pb-0 bg-gradient-info my-5">
+	const [isDarkMode] = useDarkMode()
+	return educationInfo && (
+		<section className={`section pb-0 ${isDarkMode ? "bg-gradient-dark" : "bg-gradient-info"} my-5`}>
 			<Container>
 				<div className="d-flex px-3">
 					<div>
@@ -25,6 +27,7 @@ const Education: React.FC<IEducationProps> = ({ }) => {
 					{educationInfo.map((info) => {
 						return (
 							<Col
+								// style={{ zIndex: 10 }}
 								className="order-lg-1"
 								lg="6"
 								key={info.schoolName}
@@ -45,7 +48,7 @@ const Education: React.FC<IEducationProps> = ({ }) => {
 					y="0"
 				>
 					<polygon
-						className="fill-white"
+						className={`${isDarkMode ? "fill-custom-dark" : "fill-white"}`}
 						points="2560 0 2560 100 0 100"
 					/>
 				</svg>

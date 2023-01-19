@@ -1,14 +1,21 @@
 import React from 'react';
 import { Card, CardBody, Badge } from "reactstrap";
 import Reveal from "react-awesome-reveal";
+import { useTheme } from 'styled-components';
 export type IEducationCardProps = {
     education: any
 }
 
 const EducationCard: React.FC<IEducationCardProps> = ({ education }) => {
+    const theme = useTheme()
     return (
         <Reveal triggerOnce duration={2000} >
-            <Card className="card-lift--hover shadow mt-4">
+            <Card className="card-lift--hover shadow mt-4"
+                style={{
+                    zIndex:10,
+                    backgroundColor: theme?.cardBackground,
+                    borderColor: theme?.cardBorderColor,
+                }}>
                 <CardBody>
                     <div className="d-flex px-3">
                         <div className="pl-4">

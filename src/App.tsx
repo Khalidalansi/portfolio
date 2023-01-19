@@ -1,54 +1,34 @@
 import React from 'react';
-import Navigation from './components/Navigation';
-import logo from './logo.svg';
-
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './styles/ArgonDesignSystemReact.css';
 import './styles/styles.css';
 import "./styles/vendor/font-awesome/css/font-awesome.min.css";
 import "./styles/vendor/nucleo/css/nucleo.css";
 import './assets/fonts/Agustina.otf';
-import Greetings from './components/Greetings';
-import Skills from './containers/Skills';
-import Proficiency from './containers/Proficiency';
-import Education from './containers/Education';
-import Experience from './containers/Experience';
-import Feedbacks from './containers/Feedbacks';
-import Projects from './containers/Projects';
-import GithubProfileCard from './components/GithubProfileCard';
-import { openSource } from './constants/portfolio';
+import { ThemeProvider } from 'styled-components';
+import MainApp from './MainApp';
+import SettingsContext from './constants/Theme/Settings/SettingsContext';
+import { darkTheme, lightTheme } from './constants/Theme/themes';
+import GlobalStyles from './constants/Theme/GlobalStyles';
+import SettingsProvider from './constants/Theme/Settings/SettingsProvider';
 
-const githubProfileData = async (githubUserName: string): Promise<any> => {
-  const githubProfileData = await fetch(
-    `https://api.github.com/users/${githubUserName}`
-  ).then((res) => res.json());
-  return githubProfileData
-}
-function App() {
-  const [profileData, setProfileData] = React.useState({
-    avatar_url: "",
-    bio: "",
-    location: "",
-  });
-  React.useEffect(() => {
-    githubProfileData(openSource.githubUserName).then((res) => {
-      setProfileData(res)
-    })
-  }, []);
-
+const RootApp = (): JSX.Element => {
+  const context = React.useContext(SettingsContext);
+  const theme = context?.darkMode ? darkTheme : lightTheme;
   return (
-    <>
-      <Navigation />
-      <Greetings />
-      <Skills />
-      <Proficiency />
-      <Education />
-      <Experience />
-      {/* <Feedbacks /> */}
-      <Projects />
-      <GithubProfileCard prof={profileData} />
-    </>
-  );
+    <ThemeProvider theme={theme}>
+      <GlobalStyles />
+      <MainApp />
+    </ThemeProvider>
+  )
 }
 
+
+export const App = () => {
+  return (
+    <SettingsProvider>
+      <RootApp />
+    </SettingsProvider >
+  )
+};
 export default App;

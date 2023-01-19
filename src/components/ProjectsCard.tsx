@@ -1,6 +1,7 @@
 import React from 'react';
 import { Card, CardBody, Col, Button } from "reactstrap";
 import Reveal from "react-awesome-reveal";
+import { useTheme } from 'styled-components';
 export type IProjectsCardProps = {
     data: {
         name: string,
@@ -11,10 +12,18 @@ export type IProjectsCardProps = {
 }
 
 const ProjectsCard: React.FC<IProjectsCardProps> = ({ data }) => {
+    const theme = useTheme()
     return (
         <Col lg="6">
             <Reveal triggerOnce duration={2000} >
-                <Card className="shadow-lg--hover shadow mt-4">
+                <Card className="shadow-lg--hover shadow mt-4"
+                  style={{
+                    minHeight:250,
+                    flex: 1,
+                    backgroundColor: theme?.cardBackground,
+                    borderColor: theme?.cardBorderColor,
+                }}
+                >
                     <CardBody>
                         <div className="d-flex px-3">
                             <div className="pl-4">
