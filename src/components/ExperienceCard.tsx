@@ -38,6 +38,8 @@ const ExperienceCard: React.FC<IExperienceCardProps> = ({ data }) => {
                                 width: "8rem",
                                 height: "8rem",
                                 borderRadius: "50%",
+                                backgroundColor:"transparent",
+                                padding:5
                             }}
                             className="shadow mb-3"
                             alt={data.companylogo}

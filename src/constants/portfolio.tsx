@@ -4,7 +4,7 @@ export const greetings = {
     name: "Khalid Alansi",
     title: "Hi all, I'm Khalid Alansi",
     description:
-        "I'm passionate Full Stack web developer and Mobile Developer having an experience of web applications with PHP, Laravel, Wordpress, React.js, and Mobile applications with React-Native",
+        "I'm Full Stack Developer with over 5 years of experience in software engineering and developing new features and apps for different products and clients by using programming tools like Reactjs, React-Native, Wordpress, Laravel, Node.js ..etc . Capable of analyzing customer feedback in order to find the best way to create new and enhance the existing product features and performing quality assurance.",
     resumeLink:
         "https://drive.google.com/file/d/1zzbZiKRIUW9qUTQKhbV41dbQbuB0TIOw/view?usp=sharing",
 };
@@ -52,7 +52,7 @@ export const skillsSection = {
                     skillName: "HTML-5",
                     fontAwesomeClassname: "vscode-icons:file-type-html",
                 },
-               
+
                 {
                     skillName: "CSS-3",
                     fontAwesomeClassname: "vscode-icons:file-type-css",
@@ -191,8 +191,8 @@ export const experience = [
     {
         role: "Full-Stack Developer",
         company: "INTP LLC",
-        // companylogo: require("../assets/images/INTP LLCalienventures.png"),
-        companylogo: "https://avatars.githubusercontent.com/u/81111279?v=4",
+        companylogo: require("../assets/images/intp.png"),
+        // companylogo: "https://avatars.githubusercontent.com/u/81111279?v=4",
 
         date: "2018 – 2023",
         desc: "It's a startup in USA in Denver developing websites and mobile apps.",
@@ -214,6 +214,11 @@ export const projects = [
         desc: "Software Developer Portfolio Template built with react.js and typescript bootstrap that helps you showcase your work and skills as a software developer.",
         github: "https://github.com/Khalidalansi/portfolio",
         link: "https://khalidalansi.github.io",
+    },
+    {
+        name: "Movesheet",
+        desc: "This is a project for the company and it is a web application and a mobile application ( React js - Node js - Wordpress - Webppack - React-Native ).",
+        link: "https://movesheet.com",
     },
     // {
     //     name: "Deirezzor24",
@@ -245,11 +250,7 @@ export const projects = [
         desc: "built this project for a client of ( INTP LLC ). ( React js - Node js - Wordpress - Webppack ).",
         link: "https://www.easyeatery.net",
     },
-    {
-        name: "Movesheet",
-        desc: "This is a project for the company and it is a web application and a mobile application ( React js - Node js - Wordpress - Webppack - React-Native ).",
-        link: "https://movesheet.com",
-    },
+    
 ];
 
 export const feedbacks = [
