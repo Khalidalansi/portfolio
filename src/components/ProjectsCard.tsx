@@ -2,13 +2,10 @@ import React from 'react';
 import { Card, CardBody, Col, Button } from "reactstrap";
 import Reveal from "react-awesome-reveal";
 import { useTheme } from 'styled-components';
+import { ProjectT } from '../types/ProjectT';
+import _ from 'lodash'
 export type IProjectsCardProps = {
-    data: {
-        name: string,
-        desc: string
-        github?: string
-        link?: string
-    }
+    data: ProjectT
 }
 
 const ProjectsCard: React.FC<IProjectsCardProps> = ({ data }) => {
@@ -17,14 +14,17 @@ const ProjectsCard: React.FC<IProjectsCardProps> = ({ data }) => {
         <Col lg="6">
             <Reveal triggerOnce duration={2000} >
                 <Card className="shadow-lg--hover shadow mt-4"
-                  style={{
-                    minHeight:250,
-                    flex: 1,
-                    backgroundColor: theme?.cardBackground,
-                    borderColor: theme?.cardBorderColor,
-                }}
+                    style={{
+                        minHeight: 250,
+                        flex: 1,
+                        backgroundColor: theme?.cardBackground,
+                        borderColor: theme?.cardBorderColor,
+                    }}
                 >
                     <CardBody>
+                        {_.isArray(data?.images) && data?.images.length > 0 &&
+                            <img src={data?.images[0]?.link}
+                                className=" w-100 h-[840px] transition duration-300 ease-linear align-middle" />}
                         <div className="d-flex px-3">
                             <div className="pl-4">
                                 <h3>{data.name}</h3>

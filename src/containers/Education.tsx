@@ -11,7 +11,7 @@ export type IEducationProps = {
 const Education: React.FC<IEducationProps> = ({ }) => {
 	const [isDarkMode] = useDarkMode()
 	return educationInfo && (
-		<section className={`section pb-0 ${isDarkMode ? "bg-gradient-dark" : "bg-gradient-info"} my-5`}>
+		<section className={`section pb-200 ${isDarkMode ? "bg-gradient-dark" : "bg-gradient-info"} my-5`}>
 			<Container>
 				<div className="d-flex px-3">
 					<div>

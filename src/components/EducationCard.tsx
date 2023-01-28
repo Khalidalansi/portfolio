@@ -10,7 +10,7 @@ const EducationCard: React.FC<IEducationCardProps> = ({ education }) => {
     const theme = useTheme()
     return (
         <Reveal triggerOnce duration={2000} >
-            <Card className="card-lift--hover shadow mt-4"
+            <Card className="card-lift--hover shadow  mt-4"
                 style={{
                     zIndex:10,
                     backgroundColor: theme?.cardBackground,
