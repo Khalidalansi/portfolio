@@ -3,18 +3,19 @@ import { SkillBars } from '../constants/portfolio';
 import { Container, Row, Progress, Col } from "reactstrap";
 import Reveal from "react-awesome-reveal";
 import GreetingLottie from '../components/GreetingLottie';
-
+import styled, { useTheme } from 'styled-components';
 export type IProficiencyProps = {
     
 }
 
 const Proficiency: React.FC<IProficiencyProps> = ({ }) => {
+	const theme = useTheme()
     return SkillBars && (
 		<Container className="section section-lg">
 			<Reveal triggerOnce  duration={2000} >
 				<Row>
 					<Col lg="6">
-						<h1 className="h1">Proficiency</h1>
+						<h1 className="h1" style={{ color: theme?.color }}>Proficiency</h1>
 						{SkillBars.map((skill) => {
 							return (
 								<div
@@ -22,7 +23,7 @@ const Proficiency: React.FC<IProficiencyProps> = ({ }) => {
 									key={skill.Stack}
 								>
 									<div className="progress-label">
-										<span>{skill.Stack}</span>
+										<h6 style={{ color: theme?.color }}>{skill.Stack}</h6>
 									</div>
 									<div className="progress-percentage">
 										<span>{skill.progressPercentage}%</span>

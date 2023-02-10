@@ -13,6 +13,7 @@
     "@types/node": "^16.18.11",
     "@types/react": "^18.0.26",
     "@types/react-dom": "^18.0.10",
+    "bezier-js": "^6.1.0",
     "bootstrap": "^5.2.3",
     "headroom.js": "^0.12.0",
     "lodash": "^4.17.21",

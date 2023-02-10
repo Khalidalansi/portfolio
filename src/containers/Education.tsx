@@ -3,19 +3,27 @@ import { educationInfo } from '../constants/portfolio';
 import { Container, Row, Col } from "reactstrap";
 import EducationCard from '../components/EducationCard';
 import { useDarkMode } from '../constants/Theme/useDarkMode';
-
+import styled, { useTheme } from 'styled-components';
 export type IEducationProps = {
 
 }
 
 const Education: React.FC<IEducationProps> = ({ }) => {
 	const [isDarkMode] = useDarkMode()
+	const theme = useTheme()
 	return educationInfo && (
 		<section className={`section pb-200 ${isDarkMode ? "bg-gradient-dark" : "bg-gradient-info"} my-5`}>
 			<Container>
 				<div className="d-flex px-3">
 					<div>
-						<div className="icon icon-lg icon-shape bg-gradient-white shadow rounded-circle text-info">
+						<div className="icon icon-lg icon-shape shadow rounded-circle text-info"
+						style={{
+							borderWidth: 1,
+							borderStyle: "solid",
+							borderColor: theme?.cardBorderColor,
+							backgroundColor: theme?.cardBackground
+						}}
+						>
 							<i className="ni ni-books text-info" />
 						</div>
 					</div>

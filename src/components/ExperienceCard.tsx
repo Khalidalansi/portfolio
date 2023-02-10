@@ -19,9 +19,11 @@ const ExperienceCard: React.FC<IExperienceCardProps> = ({ data }) => {
         <Col lg="6">
             <Reveal triggerOnce duration={2000}>
                 <Card
-                    className="shadow-lg--hover mb-3 shadow border-0 text-center rounded"
+                    className="shadow-lg--hover mb-3 shadow text-center rounded"
                     style={{
                         flex: 1,
+                        borderWidth:1,
+                        borderStyle:"solid",
                         backgroundColor: theme?.cardBackground,
                         borderColor: theme?.cardBorderColor,
                     }}>
@@ -44,10 +46,10 @@ const ExperienceCard: React.FC<IExperienceCardProps> = ({ data }) => {
                             className="shadow mb-3"
                             alt={data.companylogo}
                         />
-                        <CardTitle tag="h4" className="mb-2">
+                        <CardTitle  style={{ color: theme?.color }} tag="h4" className="mb-2">
                             {data.company}
                         </CardTitle>
-                        <CardSubtitle tag="h5" className="mb-2">
+                        <CardSubtitle  style={{ color: theme?.accentColor }} tag="h5" className="mb-2">
                             {data.role}
                         </CardSubtitle>
                         <CardSubtitle>{data.date}</CardSubtitle>

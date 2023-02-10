@@ -9,7 +9,7 @@ export interface SoftwareSkillsT {
 export interface SkillsItemT {
     title: string
     lottieAnimationFile: string
-    skills: Array<string>
+    skills: Array<string|JSX.Element>
     softwareSkills: Array<SoftwareSkillsT>
 
 }

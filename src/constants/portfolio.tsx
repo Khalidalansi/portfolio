@@ -1,5 +1,6 @@
 import emoji from "react-easy-emoji";
 import { ProjectT } from "../types/ProjectT";
+import { SkillsSectionT } from "../types/SkillsSection";
 
 export const greetings = {
     name: "Khalid Alansi",
@@ -28,7 +29,7 @@ export const socialLinks: SocialLinksT = {
     // twitter: "https://twitter.com/1hanzla100",
 };
 
-export const skillsSection = {
+export const skillsSection: SkillsSectionT = {
     title: "What I do",
     subTitle:
         "CRAZY FULL STACK DEVELOPER WHO WANTS TO EXPLORE EVERY TECH STACK",
@@ -50,6 +51,65 @@ export const skillsSection = {
             ],
             softwareSkills: [
                 {
+                    skillName: " styled-components",
+                    fontAwesomeClassname: "simple-icons:styled-components",
+                },
+                {
+                    skillName: "Material UI",
+                    fontAwesomeClassname: "logos:material-ui",
+                },
+                {
+                    skillName: "Typescript",
+                    fontAwesomeClassname: "vscode-icons:file-type-typescript",
+                },
+                {
+                    skillName: "Redux",
+                    fontAwesomeClassname: "logos:redux",
+                },
+                {
+                    skillName: "Webpack",
+                    fontAwesomeClassname: "logos:webpack",
+                },
+                {
+                    skillName: "Laravel",
+                    fontAwesomeClassname: "logos:laravel",
+                },
+                {
+                    skillName: "React-Native",
+                    fontAwesomeClassname: "tabler:brand-react-native",
+                },
+           
+                {
+                    skillName: "Reactjs",
+                    fontAwesomeClassname: "vscode-icons:file-type-reactjs",
+                },
+        
+                {
+                    skillName: "NPM",
+                    fontAwesomeClassname: "logos:npm-icon",
+                },
+                {
+                    skillName: "Yarn",
+                    fontAwesomeClassname: "logos:yarn",
+                },
+                  
+                {
+                    skillName: "Wordpress",
+                    fontAwesomeClassname: "skill-icons:wordpress",
+                },
+                {
+                    skillName: "Nodejs",
+                    fontAwesomeClassname: "logos:nodejs",
+                },
+                {
+                    skillName: "PHP",
+                    fontAwesomeClassname: "vscode-icons:file-type-php3",
+                },
+                {
+                    skillName: "JavaScript",
+                    fontAwesomeClassname: "logos:javascript",
+                },
+                {
                     skillName: "HTML-5",
                     fontAwesomeClassname: "vscode-icons:file-type-html",
                 },
@@ -59,57 +119,18 @@ export const skillsSection = {
                     fontAwesomeClassname: "vscode-icons:file-type-css",
                 },
                 {
-                    skillName: "Material UI",
-                    fontAwesomeClassname: "logos:material-ui",
-                },
-                {
-                    skillName: "JavaScript",
-                    fontAwesomeClassname: "logos:javascript",
-                },
-                {
-                    skillName: "Nodejs",
-                    fontAwesomeClassname: "logos:nodejs",
-                },
-                {
-                    skillName: "Reactjs",
-                    fontAwesomeClassname: "vscode-icons:file-type-reactjs",
-                },
-                {
-                    skillName: "React-Native",
-                    fontAwesomeClassname: "tabler:brand-react-native",
-                },
-                {
-                    skillName: "PHP",
-                    fontAwesomeClassname: "logos:php",
-                },
-                {
-                    skillName: "Laravel",
-                    fontAwesomeClassname: "logos:laravel",
-                },
-                {
-                    skillName: "Redux",
-                    fontAwesomeClassname: "logos:redux",
-                },
-                {
-                    skillName: "NPM",
-                    fontAwesomeClassname: "logos:npm-icon",
-                },
-                {
-                    skillName: "Yarn",
-                    fontAwesomeClassname: "logos:yarn",
-                },
-                {
-                    skillName: "Webpack",
-                    fontAwesomeClassname: "logos:webpack",
-                },
-                {
-                    skillName: "Typescript",
-                    fontAwesomeClassname: "vscode-icons:file-type-typescript",
-                },
-                {
                     skillName: "Bootstrap",
                     fontAwesomeClassname: "logos:bootstrap",
                 },
+                {
+                    skillName: "c-sharp",
+                    fontAwesomeClassname: "logos:c-sharp",
+                },
+                // {
+                //     skillName: "vb-net",
+                //     fontAwesomeClassname: "vscode-icons:file-type-vba",
+                // },
+    
             ],
         },
         {
@@ -218,15 +239,120 @@ export const projects: Array<ProjectT> = [
         link: "https://khalidalansi.github.io",
         images: [
             {
-                link: require("../assets/images/projects/easyeatery.jpg")
+                link: require("../assets/images/projects/portfolio.jpg")
             }
         ],
+        technologies: [
+            {
+                name: "React",
+                fontAwesomeClassname: "vscode-icons:file-type-reactjs"
+            },
+            {
+                name: "Bootstrap",
+                fontAwesomeClassname: "logos:bootstrap",
+            },
+            {
+                name: "HTML-5",
+                fontAwesomeClassname: "vscode-icons:file-type-html",
+            },
+
+            {
+                name: "CSS-3",
+                fontAwesomeClassname: "vscode-icons:file-type-css",
+            },
+            {
+                name: " styled-components",
+                fontAwesomeClassname: "simple-icons:styled-components",
+            },
+
+        ]
     },
     {
         name: "Movesheet",
         desc: "This is a project for the company and it is a web application and a mobile application ( React js - Node js - Wordpress - Webppack - React-Native ).",
         link: "https://movesheet.com",
-        images: [],
+        images: [
+            {
+                link: require("../assets/images/projects/movesheet.jpg")
+            },
+            {
+                link: require("../assets/images/projects/movesheet2.jpg")
+            }
+        ],
+        technologies: [
+            {
+                name: "React",
+                fontAwesomeClassname: "vscode-icons:file-type-reactjs"
+            },
+            {
+                name: "React-native",
+                fontAwesomeClassname: "tabler:brand-react-native"
+            },
+            {
+                name: "Material UI",
+                fontAwesomeClassname: "logos:material-ui",
+            },
+            {
+                name: "Nodejs",
+                fontAwesomeClassname: "logos:nodejs",
+            },
+            {
+                name: "PHP",
+                fontAwesomeClassname: "vscode-icons:file-type-php3",
+            },
+            {
+                name: "Wordpress",
+                fontAwesomeClassname: "skill-icons:wordpress",
+            },
+            {
+                name: "Typescript",
+                fontAwesomeClassname: "vscode-icons:file-type-typescript",
+            },
+            {
+                name: "Webpack",
+                fontAwesomeClassname: "logos:webpack",
+            },
+        ]
+    },
+    {
+        name: "EasyEatery",
+        desc: "built this project for a client of ( INTP LLC ). ( React js - Node js - Wordpress - Webppack ).",
+        link: "https://www.easyeatery.net",
+        images: [
+            {
+                link: require("../assets/images/projects/easyeatery.jpg")
+            }
+        ],
+        technologies: [
+            {
+                name: "React",
+                fontAwesomeClassname: "vscode-icons:file-type-reactjs"
+            },
+            {
+                name: "Material UI",
+                fontAwesomeClassname: "logos:material-ui",
+            },
+            {
+                name: "Nodejs",
+                fontAwesomeClassname: "logos:nodejs",
+            },
+            {
+                name: "PHP",
+                fontAwesomeClassname: "vscode-icons:file-type-php3",
+            },
+            {
+                name: "Wordpress",
+                fontAwesomeClassname: "skill-icons:wordpress",
+            },
+            {
+                name: "Typescript",
+                fontAwesomeClassname: "vscode-icons:file-type-typescript",
+            },
+            {
+                name: "Webpack",
+                fontAwesomeClassname: "logos:webpack",
+            },
+        ]
     },
     // {
     //     name: "Deirezzor24",
@@ -256,12 +382,7 @@ export const projects: Array<ProjectT> = [
         github: "https://github.com/INTP LLCalienventures/prototype-node",
         images: [],
     },
-    {
-        name: "EasyEatery",
-        desc: "built this project for a client of ( INTP LLC ). ( React js - Node js - Wordpress - Webppack ).",
-        link: "https://www.easyeatery.net",
-        images: [],
-    },
+
 
 ];
 

@@ -22,7 +22,7 @@ const EducationCard: React.FC<IEducationCardProps> = ({ education }) => {
                             <h5 className="text-info">
                                 {education.schoolName}
                             </h5>
-                            <h6>{education.subHeader}</h6>
+                            <h6 style={{ color: theme?.color }}>{education.subHeader}</h6>
                             <Badge color="info" className="mr-1">
                                 {education.duration}
                             </Badge>
@@ -31,7 +31,7 @@ const EducationCard: React.FC<IEducationCardProps> = ({ education }) => {
                                     {education.grade}
                                 </Badge>
                             )}
-                            <p className="description mt-3">{education.desc}</p>
+                            <p className="description mt-3" >{education.desc}</p>
                             <ul>
                                 {education.descBullets
                                     // @ts-ignore
