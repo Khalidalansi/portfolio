@@ -2,6 +2,7 @@
   "name": "portfolio-app",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://github.com/Khalidalansi/portfolio",
   "dependencies": {
     "@crello/react-lottie": "^0.0.11",
     "@iconify/react": "^4.0.1",
@@ -15,6 +16,7 @@
     "@types/react-dom": "^18.0.10",
     "bezier-js": "^6.1.0",
     "bootstrap": "^5.2.3",
+    "gh-pages": "^5.0.0",
     "headroom.js": "^0.12.0",
     "lodash": "^4.17.21",
     "react": "^18.2.0",
@@ -31,7 +33,9 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "build": "react-scripts build && npm run resolve-build",
+    "build": "npm run build",
+    "predeploy": "react-scripts build && npm run resolve-build",
+    "deploy": "gh-pages -d build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "resolve-build": "node scripts/resolve-build.js"
