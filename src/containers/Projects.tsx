@@ -2,30 +2,13 @@ import React from 'react';
 import { Button, Card, CardBody, Carousel, CarouselCaption, CarouselControl, CarouselIndicators, CarouselItem, Col, Container, Row } from "reactstrap";
 import ProjectsCard from '../components/ProjectsCard';
 import { projects } from '../constants/portfolio';
-import { useHorizontalScroll } from '../Hooks/useHorizontalScroll';
-import useHorizontalScroll2 from '../Hooks/useHorizontalScroll2';
+
 import _ from 'lodash'
 import styled, { useTheme } from 'styled-components';
 import { ProjectT } from '../types/ProjectT';
 import images from '../constants/images';
 import { Icon } from "@iconify/react";
-const items = [
-	{
-		id: 1,
-		altText: 'Slide 1',
-		caption: 'Slide 1',
-	},
-	{
-		id: 2,
-		altText: 'Slide 2',
-		caption: 'Slide 2',
-	},
-	{
-		id: 3,
-		altText: 'Slide 3',
-		caption: 'Slide 3',
-	},
-];
+
 
 export type IProjectsProps = {
 
@@ -39,13 +22,13 @@ const Projects: React.FC<IProjectsProps> = ({ }) => {
 
 	const next = () => {
 		if (animating) return;
-		const nextIndex = activeIndex === items.length - 1 ? 0 : activeIndex + 1;
+		const nextIndex = activeIndex === projects.length - 1 ? 0 : activeIndex + 1;
 		setActiveIndex(nextIndex);
 	};
 
 	const previous = () => {
 		if (animating) return;
-		const nextIndex = activeIndex === 0 ? items.length - 1 : activeIndex - 1;
+		const nextIndex = activeIndex === 0 ? projects.length - 1 : activeIndex - 1;
 		setActiveIndex(nextIndex);
 	};
 
@@ -78,11 +61,7 @@ const Projects: React.FC<IProjectsProps> = ({ }) => {
 				}}
 			>
 				{renderCover(item)}
-				{/* <CarouselCaption
-					className="text-danger"
-					captionText={item.name}
-					captionHeader={item.name}
-				/> */}
+			
 			</CarouselItem>
 		);
 	});
@@ -112,7 +91,6 @@ const Projects: React.FC<IProjectsProps> = ({ }) => {
 			<Container  >
 				<Card className='p-2'
 					style={{
-
 						backgroundColor: theme?.cardBackground,
 						borderColor: theme?.cardBorderColor,
 					}}>
@@ -141,7 +119,7 @@ const Projects: React.FC<IProjectsProps> = ({ }) => {
 								</Carousel>
 								<CarouselIndicators
 									style={{ color: "#eee" }}
-									items={items}
+									items={projects}
 									activeIndex={activeIndex}
 									onClickHandler={goToIndex}
 								/>
@@ -168,9 +146,7 @@ const Projects: React.FC<IProjectsProps> = ({ }) => {
 											<span className="btn-inner--icon" >
 												<i className="fa fa-eye " style={{ fontSize: 20, color: theme?.color }} />
 											</span>
-											{/* <span className="nav-link-inner--text ml-1">
-												View Site
-											</span> */}
+										
 										</Button>
 									) : null}
 									{projects[activeIndex]?.github ? (
@@ -218,39 +194,7 @@ const Projects: React.FC<IProjectsProps> = ({ }) => {
 										)
 									})}
 								</div>
-								{/* <h4 className='mt-2'>Links:</h4> */}
-								{/* <div>
-									{projects[activeIndex]?.link ? (
-										<Button
-											className="btn-icon"
-											color="success"
-											href={projects[activeIndex]?.link}
-											target="_blank"
-											rel="noopener" aria-label="Twitter"
-										>
-											<span className="btn-inner--icon">
-												<i className="fa fa-arrow-right mr-2" />
-											</span>
-											<span className="nav-link-inner--text ml-1">
-												View Site
-											</span>
-										</Button>
-									) : null}
-									{projects[activeIndex]?.github ? (
-										<Button
-											className="btn-icon"
-											color="github"
-											href={projects[activeIndex].github}
-											target="_blank"
-											rel="noopener"
-											aria-label="Github"
-										>
-											<span className="btn-inner--icon">
-												<i className="fa fa-github" />
-											</span>
-										</Button>
-									) : null}
-								</div> */}
+								
 							</Col>
 						</Row>
 					</CardBody>

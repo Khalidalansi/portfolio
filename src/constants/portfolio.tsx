@@ -354,8 +354,44 @@ export const projects: Array<ProjectT> = [
             },
         ]
     },
+    {
+        name: "Bin Zaidoon",
+        desc: "This is a project for the company and it is a web application and a mobile application ( React js - Node js - Wordpress - Webppack - React-Native ).",
+        link: "https://www.bzst.co/",
+        images: [
+            {
+                link: require("../assets/images/projects/binzaidoon1.png")
+            },
+            {
+                link: require("../assets/images/projects/binzaidoon1.png")
+            },
+            {
+                link: require("../assets/images/projects/binzaidoon2.png")
+            },
+            {
+                link: require("../assets/images/projects/binzaidoon3.png")
+            },
+            {
+                link: require("../assets/images/projects/binzaidoon4.png")
+            },
+            {
+                link: require("../assets/images/projects/binzaidoon5.png")
+            }
+        ],
+        technologies: [
+          
+            {
+                name: "Wordpress",
+                fontAwesomeClassname: "skill-icons:wordpress",
+            },
+            {
+                name: "PHP",
+                fontAwesomeClassname: "vscode-icons:file-type-php3",
+            },
+        ]
+    },
     // {
-    //     name: "Deirezzor24",
+    //     name: "binzaidoon",
     //     desc: "I created an application for a remote client to view the news and connect it with a WordPress blog. ( React-Native )",
     //     link: "https://play.google.com/store/apps/details?id=com.deirezzor24",
     // },

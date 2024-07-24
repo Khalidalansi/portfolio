@@ -33,7 +33,7 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "build": "npm run build",
+    "build": "react-scripts build",
     "predeploy": "react-scripts build && npm run resolve-build",
     "deploy": "gh-pages -d build",
     "test": "react-scripts test",
